@@ -74,7 +74,7 @@ Follow the prompts to enter the user name, email address and password.
 
 After completing the above steps, you can run and use this project.
 
-In the test environment, you can use the server provided by Django to run mrdoc. The command is:
+In the test environment, you can use the server provided by Django to run UniHub. The command is:
 
 ```
 python manage.py runserver
