@@ -1,14 +1,10 @@
 ## 如何运行
-### mongodb
+### mongodb(mongoose)
 ```sh
 sudo systemctl start mongod
 ```
 ```sh
 sudo systemctl status mongod
-```
-
-```sh
-mongosh -u root -p root --authenticationDatabase admin
 ```
 
 ### backend
@@ -23,14 +19,25 @@ npm run serve
 
 ### mysql2
 
-### mongoose
+
+## 如何导入
+### mongodb
 ```sh
-sudo systemctl start mongod
-sudo systemctl status mongod
+mongorestore --db unihub /path/to/unihub1224
 ```
 
+### mysql
+```sh
+mysql -u root -p unihub < mysql_1224.sql
+```
+
+## 用户名和密码
 ### mongosh
 ```sh
 mongosh --username unihubroot --password unihubroot --authenticationDatabase unihub
 mongosh -u root -p
-```sh
+```
+
+### mysql
+root
+root
