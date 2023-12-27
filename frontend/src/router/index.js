@@ -9,6 +9,8 @@ import HomeLoading from '../views/HomeLoading.vue'
 import FileManager from '../views/FileManager.vue'
 import DdlManager from '../views/DdlManager.vue'
 
+import FileHome from '../views/FileHome.vue'
+
 const routes = [
   {
     path: '/',
@@ -35,6 +37,7 @@ const routes = [
   {path: '/home/homeloading', name: 'homeloading', component : HomeLoading},
   {path: '/home/file-manager', name: 'file-manager', component : FileManager},
   {path: '/home/ddl-manager', name: 'ddl-manager', component : DdlManager},
+  {path: '/home/file-home', name: 'file-home', component : FileHome},
 ]
 
 const router = createRouter({
