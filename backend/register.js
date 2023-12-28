@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
             });
         } else {
             // 用户不存在，执行插入操作
-            connection.query('INSERT INTO Users (username, email, password, name) VALUES (?, ?, ?, ?)', [username, email, password, nickname], (error, results) => {
+            connection.query('INSERT INTO Users (username, email, password, nickname) VALUES (?, ?, ?, ?)', [username, email, password, nickname], (error, results) => {
                 if (error) throw error;
 
                 res.json({

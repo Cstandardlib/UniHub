@@ -6,6 +6,7 @@ export default createStore({
     isLoading: false,
     userData: {},
     selectedDocument: null,
+    documentId: null,
   },
   mutations: {
     SET_LOADING(state, status) {
@@ -37,6 +38,9 @@ export default createStore({
     UPDATE_SELECTED_DOCUMENT_CONTENT(state, updatedDocument) {
       state.selectedDocument = updatedDocument;
     },
+    SET_SELECTED_FILE_ID(state,documentId){
+      state.documentId = documentId;
+    }
   },
   actions: {
     fetchDataFromBackend({ commit }) {

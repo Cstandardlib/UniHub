@@ -78,7 +78,7 @@ export default {
         showDocument(document) {
             this.$store.commit('SET_SELECTED_DOCUMENT', document); // 设置选中的文档
             this.selectedDocument = document; // 更新选中文档
-            this.documentContent = document.content; // 更新文档内容
+            this.markdownContent = document.content; // 更新文档内容
             this.$store.commit('UPDATE_SELECTED_DOCUMENT_CONTENT', document); // 更新 Vuex 中选中文档内容
 
         },

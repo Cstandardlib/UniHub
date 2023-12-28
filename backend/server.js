@@ -7,6 +7,7 @@ const checkUsername = require('./checkUsername');
 const checkEmail = require('./checkEmail');
 const getUserData = require('./getalldata');
 const getFileData = require('./getfiledata');
+const savefile = require('./savefile');
 
 const app = express();
 const PORT = 3005;
@@ -24,9 +25,9 @@ app.use('/api/checkUsername',checkUsername);
 app.use('/api/checkEmail', checkEmail);
 app.use('/api/getUserData',getUserData);
 app.use('/api/getFileData',getFileData);
+app.use('/api/savefile',savefile);
 
 app.get('/api/hello', (req, res) => {
-  // add current time to the message
   const time = new Date().toLocaleTimeString();
 
   res.json({ message: `Msg from backend at ${time}: Hello, world!` });

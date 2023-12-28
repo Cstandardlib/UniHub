@@ -53,7 +53,7 @@ export default {
 
             // 跳转到userhome.vue
             setTimeout(() => {
-              this.$router.push('/home/userhome');
+              this.$router.push('/home/newhome');
             }, 1000); // 1000毫秒后跳转，这里可以根据需要调整时间 */
           } else {
             console.error('无法获取用户数据');

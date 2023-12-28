@@ -1,9 +1,13 @@
 <template>
     <div class="unihubhome">
+      <Icon type="ios-checkmark" />
       <img src="../assets/logo2.png" alt="Logo" class="logo">
+      <!-- <Image  src="../assets/logo2.png" alt="Logo"/> -->
       <div class="buttons">
-        <button @click="goToLogin">登录</button>
-        <button @click="goToRegister">注册</button>
+        <Button @click="goToLogin">登录</Button>
+        <!--<Button @click="goToFileHome">file-home</Button>
+        <Button @click="goToNewHome">newhome</Button>-->
+        <Button @click="goToRegister">注册</Button>
       </div>
       <div class="spacer">
         <a :href="githubLink">GitHub</a>
@@ -15,13 +19,19 @@
   export default {
     data() {
       return {
-        githubLink: 'https://github.com/louix33/UniHub'
+        githubLink: 'https://github.com/Cstandardlib/UniHub'
       };
     },
     methods: {
       goToLogin() {
         // 导航至登录页面
         this.$router.push('/home/login');
+      },
+      goToFileHome() {
+        this.$router.push('/home/file-home');
+      },
+      goToNewHome() {
+        this.$router.push('/home/newhome');
       },
       goToRegister() {
         // 导航至注册页面
@@ -45,7 +55,7 @@
     width: 200px;
     height: auto;
     transform: scale(4);
-    margin-top: 120px;
+    margin-top: 180px;
   }
   
   .buttons {

@@ -1,12 +1,21 @@
 <template>
+  <!-- <nav v-if="showLink"> -->
   <nav>
-  <!--   <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/test/hello">Hello World</router-link> |-->
-    <router-link to="/home/unihubhome">UniHub</router-link>
+    <router-link to="/">UniHub</router-link>
   </nav>
   <router-view/>
 </template>
+
+<script>
+export default {
+  computed: {
+    showLink() {
+      // 根据当前路由信息判断是否显示链接
+      return this.$route.path === '/';
+    },
+  },
+};
+</script>
 
 <style>
 #app {
@@ -19,6 +28,7 @@
 
 nav {
   padding: 30px;
+  margin-top: 20px;
 }
 
 nav a {
